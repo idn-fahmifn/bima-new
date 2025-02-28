@@ -1,0 +1,1 @@
+<img src="{{asset('idn_asset/logo-idn.webp')}}" width="60" alt="Logo IDN">
