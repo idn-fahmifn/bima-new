@@ -63,7 +63,12 @@ class TempatController extends Controller
 
         $data->update($input);
         return back()->with('success', 'Data berhasil diubah');
+    }
 
+    public function delete($id)
+    {
+        Tempat::findOrFail($id)->delete();
+        return redirect()->route('tempat.index')->with('success', 'Data berhasil dihapus');
     }
 
 }

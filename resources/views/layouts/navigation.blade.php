@@ -19,6 +19,9 @@
                     <x-nav-link :href="route('tempat.index')" :active="request()->routeIs('tempat.index')">
                         {{ __('Area IDN') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('respon.index')" :active="request()->routeIs('respon.index')">
+                        {{ __('Laporan Masuk') }}
+                    </x-nav-link>
                 </div>
                 
                 @else

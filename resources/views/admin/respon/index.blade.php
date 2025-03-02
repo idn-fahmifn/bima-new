@@ -11,11 +11,8 @@
                 <!-- area judul dan button kiri kanan -->
                 <div class="md:flex justify-between items-center mb-6">
                     <div>
-                        <span class="font-md text-sm dark:text-gray-300">Laporan saya</span> <br>
-                    </div>
-                    <div class="mt-6">
-                        <a href="{{ route('search.area') }}"
-                            class="bg-blue-700 px-6 py-2 text-white hover:bg-blue-500 rounded-md">Buat laporan baru</a>
+                        <h4 class="text-lg dark:text-white font-semibold">Laporan Masuk</h4>
+                        <span class="font-md text-sm dark:text-gray-300">Klik pada judul laporan untuk merespon</span>
                     </div>
                 </div>
                 <div class="overflow-x-auto">
@@ -62,8 +59,8 @@
                             @foreach ($data as $item)
                                 <tr>
                                     <td
-                                        class="py-3 px-6 text-left text-xs font-medium text-gray-700 dark:text-gray-200 tracking-wider">
-                                        {{$item->judul_laporan}}
+                                        class="py-3 px-6 text-left">
+                                        <a href="{{route('respon.create', $item->id)}}" class="text-xs font-medium text-gray-700 dark:text-gray-200 tracking-wider">{{$item->judul_laporan}}</a>
                                     </td>
                                     <td class="py-3 px-6 text-left text-xs font-medium text-gray-700 dark:text-gray-200">
                                         @if ($item->status == 'pending')
